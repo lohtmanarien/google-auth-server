@@ -3,6 +3,9 @@ import fetch from "node-fetch";
 
 const app = express();
 
+console.log("Client ID:", process.env.GOOGLE_CLIENT_ID);
+console.log("Client Secret (parcial):", process.env.GOOGLE_CLIENT_SECRET?.substring(0, 5) + "...");
+
 app.get("/oauth2redirect", async (req, res) => {
   const code = req.query.code;
 
