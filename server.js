@@ -13,7 +13,7 @@ app.get("/oauth2redirect", async (req, res) => {
       code,
       client_id: process.env.GOOGLE_CLIENT_ID,
       client_secret: process.env.GOOGLE_CLIENT_SECRET,
-      redirect_uri: "https://seu-app.up.railway.app/oauth2redirect",
+      redirect_uri: "https://google-auth-server-production.up.railway.app/oauth2redirect",
       grant_type: "authorization_code",
     }),
   });
